@@ -1,0 +1,104 @@
+{
+    "type": "object",
+    "required": [
+        "photos",
+        "stat"
+    ],
+    "properties": {
+        "photos": {
+            "$id": "#/properties/photos",
+            "type": "object",
+            "required": [
+                "page",
+                "pages",
+                "perpage",
+                "total",
+                "photo"
+            ],
+            "properties": {
+                "page": {
+                    "$id": "#/properties/photos/properties/page",
+                    "type": "integer"
+                },
+                "pages": {
+                    "$id": "#/properties/photos/properties/pages",
+                    "type": "integer"
+                },
+                "perpage": {
+                    "$id": "#/properties/photos/properties/perpage",
+                    "type": "integer"
+                },
+                "total": {
+                    "$id": "#/properties/photos/properties/total",
+                    "type": "integer"
+                },
+                "photo": {
+                    "$id": "#/properties/photos/properties/photo",
+                    "type": "array",
+                    "items": {
+                        "$id": "#/properties/photos/properties/photo/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/photos/properties/photo/items/anyOf/0",
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "owner",
+                                    "secret",
+                                    "server",
+                                    "farm",
+                                    "title",
+                                    "ispublic",
+                                    "isfriend",
+                                    "isfamily"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/id",
+                                        "type": "string"
+                                    },
+                                    "owner": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/owner",
+                                        "type": "string"
+                                    },
+                                    "secret": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/secret",
+                                        "type": "string"
+                                    },
+                                    "server": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/server",
+                                        "type": "string"
+                                    },
+                                    "farm": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/farm",
+                                        "type": "integer"
+                                    },
+                                    "title": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/title",
+                                        "type": "string"
+                                    },
+                                    "ispublic": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/ispublic",
+                                        "type": "integer"
+                                    },
+                                    "isfriend": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/isfriend",
+                                        "type": "integer"
+                                    },
+                                    "isfamily": {
+                                        "$id": "#/properties/photos/properties/photo/items/anyOf/0/properties/isfamily",
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "stat": {
+            "$id": "#/properties/stat",
+            "type": "string"
+        }
+    }
+}
